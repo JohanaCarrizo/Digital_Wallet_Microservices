@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="microservices-eureka" />
         <module name="microservices-gateway" />
+        <module name="microservices-config" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="microservices-config" options="-parameters" />
       <module name="microservices-eureka" options="-parameters" />
       <module name="microservices-gateway" options="-parameters" />
     </option>

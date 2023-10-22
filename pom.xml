@@ -20,6 +20,7 @@
   <modules>
     <module>microservices-gateway</module>
     <module>microservices-eureka</module>
+    <module>microservices-config</module>
   </modules>
 
   <properties>
