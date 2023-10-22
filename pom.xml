@@ -19,6 +19,7 @@
 
   <modules>
     <module>microservices-gateway</module>
+    <module>microservices-eureka</module>
   </modules>
 
   <properties>
