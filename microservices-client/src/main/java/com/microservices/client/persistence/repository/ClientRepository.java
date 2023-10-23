@@ -1,10 +1,10 @@
-package com.microservices.client.persistance.repository;
+package com.microservices.client.persistence.repository;
 
 import com.microservices.client.domain.dto.ClientRequestDto;
 import com.microservices.client.domain.dto.ClientResponseDto;
 import com.microservices.client.domain.respository.IClientRepository;
-import com.microservices.client.persistance.dao.ClientCrudRepository;
-import com.microservices.client.persistance.mapper.IClientMapper;
+import com.microservices.client.persistence.dao.ClientCrudRepository;
+import com.microservices.client.persistence.mapper.IClientMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

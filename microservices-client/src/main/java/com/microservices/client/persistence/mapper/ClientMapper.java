@@ -1,8 +1,8 @@
-package com.microservices.client.persistance.mapper;
+package com.microservices.client.persistence.mapper;
 
 import com.microservices.client.domain.dto.ClientRequestDto;
 import com.microservices.client.domain.dto.ClientResponseDto;
-import com.microservices.client.persistance.entity.ClientEntity;
+import com.microservices.client.persistence.entity.ClientEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
