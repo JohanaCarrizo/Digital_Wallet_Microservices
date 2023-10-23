@@ -22,6 +22,7 @@
     <module>microservices-eureka</module>
     <module>microservices-config</module>
     <module>microservices-client</module>
+    <module>microservices-wallet</module>
   </modules>
 
   <properties>
