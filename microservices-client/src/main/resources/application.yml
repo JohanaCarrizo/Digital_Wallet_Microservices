@@ -3,7 +3,7 @@ spring:
     name: msvc-client
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost::3306/clientDB
+    url: jdbc:mysql://localhost:3306/clientDB
     username: ${DB_USER}
     password: ${DB_PASSWORD}
   jpa:
