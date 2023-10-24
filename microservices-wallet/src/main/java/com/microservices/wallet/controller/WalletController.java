@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 public class WalletController {
 
     private final IWalletServices walletServices;
-    @PostMapping
+    @PostMapping(WalletConstants.CREATE)
     @ResponseStatus(HttpStatus.CREATED)
     public void createWallet(@Valid @RequestBody WalletRequestDto requestDto){
         walletServices.createWallet(requestDto);
