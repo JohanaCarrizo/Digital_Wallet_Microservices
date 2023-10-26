@@ -2,6 +2,7 @@ package com.microservices.client.domain.services;
 
 import com.microservices.client.domain.dto.ClientRequestDto;
 import com.microservices.client.domain.dto.ClientResponseDto;
+import com.microservices.client.domain.dto.wallet.WalletResponseDto;
 import com.microservices.client.domain.respository.IClientRepository;
 import com.microservices.client.domain.useCase.IClientServices;
 import lombok.RequiredArgsConstructor;
@@ -27,6 +28,16 @@ public class ClientServices implements IClientServices {
 
     @Override
     public void createClient(ClientRequestDto newClientDto) {
+
         clientRepository.createClient(newClientDto);
     }
+
+    @Override
+    public WalletResponseDto getBalance(String documentNumber) {
+        if(documentNumber.trim().isEmpty())
+            throw new RuntimeException("Numero de documento no valido.");
+
+        return clientRepository.getBalance(documentNumber);
+    }
+
 }
