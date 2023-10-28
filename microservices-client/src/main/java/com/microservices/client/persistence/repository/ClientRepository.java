@@ -51,6 +51,6 @@ public class ClientRepository implements IClientRepository {
     }
     @Override
     public WalletResponseDto getBalance(String documentNumber) {
-        return walletAPIClient.getBalanceByDocument(documentNumber).getBody();
+        return walletAPIClient.getBalance(documentNumber).getBody();
     }
 }
