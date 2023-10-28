@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "msvc-wallet", url = "localhost:9091/api/v1/wallet")
+@FeignClient(name = "msvc-wallet", url = "http://localhost:9091/api/v1/wallet")
 public interface WalletAPIClient {
 
     @PostMapping(path = "/create")
     void createWallet(@Valid @RequestBody WalletRequestDto requestDto);
 
-    @GetMapping(path = "/{documentNumber}")
-    ResponseEntity<WalletResponseDto> getBalanceByDocument(@PathVariable String documentNumber);
+    @GetMapping(value = "/{documentNumber}")
+    ResponseEntity<WalletResponseDto> getBalance(@PathVariable String documentNumber);
 }

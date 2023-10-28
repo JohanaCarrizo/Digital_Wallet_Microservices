@@ -3,6 +3,7 @@ package com.microservices.client.controller;
 import com.microservices.client.constants.ClientConstants;
 import com.microservices.client.domain.dto.ClientRequestDto;
 import com.microservices.client.domain.dto.ClientResponseDto;
+import com.microservices.client.domain.dto.wallet.WalletResponseDto;
 import com.microservices.client.domain.useCase.IClientServices;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -32,5 +33,10 @@ public class ClientController {
     @ResponseStatus(HttpStatus.OK)
     public void createClient(@Valid @RequestBody ClientRequestDto newClient){
         clientServices.createClient(newClient);
+    }
+
+    @GetMapping(value = "/balance/{documentNumber}")
+    public ResponseEntity<WalletResponseDto> getBalance(@PathVariable String documentNumber){
+        return ResponseEntity.ok(clientServices.getBalance(documentNumber));
     }
 }

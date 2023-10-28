@@ -21,6 +21,6 @@ public class WalletRepository implements IWalletRepository {
 
     @Override
     public WalletResponseDto getBalance(String documentNumber) {
-        return walletMapper.toDTO(crudRepository.findByClientDocumentNumber(documentNumber).orElseThrow(() -> new RuntimeException("La billetera solicitada no se encuentra en la base de datos.")));
+        return walletMapper.toDTO(crudRepository.findByDocumentNumber(documentNumber).orElseThrow(() -> new RuntimeException("La billetera solicitada no se encuentra en la base de datos.")));
     }
 }

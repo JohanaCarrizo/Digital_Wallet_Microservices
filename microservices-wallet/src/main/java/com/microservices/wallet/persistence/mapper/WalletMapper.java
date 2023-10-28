@@ -21,7 +21,7 @@ public class WalletMapper implements IWalletMapper{
     @Override
     public WalletEntity toEntity(WalletRequestDto dto) {
         return WalletEntity.builder()
-                .clientDocumentNumber(dto.clientDocumentNumber())
+                .documentNumber(dto.clientDocumentNumber())
                 .balance(BigDecimal.valueOf(0))
                 .currency("USD")
                 .build();

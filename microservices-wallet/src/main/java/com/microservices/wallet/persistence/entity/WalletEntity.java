@@ -19,7 +19,7 @@ public class WalletEntity {
     private Long id;
 
     @Column(name = "document_number")
-    private String clientDocumentNumber;
+    private String documentNumber;
 
     private BigDecimal balance;
     private String currency;

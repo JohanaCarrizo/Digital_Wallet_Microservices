@@ -21,7 +21,7 @@ public class WalletController {
     public void createWallet(@Valid @RequestBody WalletRequestDto requestDto){
         walletServices.createWallet(requestDto);
     }
-    @GetMapping(path = WalletConstants.GET_BALANCE_URI)
+    @GetMapping(value ="/{documentNumber}")
     public ResponseEntity<WalletResponseDto> getBalance(@PathVariable String documentNumber){
         return ResponseEntity.ok(walletServices.getBalance(documentNumber));
     }

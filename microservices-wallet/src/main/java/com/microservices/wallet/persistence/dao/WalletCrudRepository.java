@@ -7,5 +7,5 @@ import java.util.Optional;
 
 public interface WalletCrudRepository extends JpaRepository<WalletEntity, Long> {
 
-    Optional<WalletEntity> findByClientDocumentNumber(String clientDocumentNumber);
+    Optional<WalletEntity> findByDocumentNumber(String clientDocumentNumber);
 }
