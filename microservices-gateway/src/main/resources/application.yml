@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: api-gateway
+    #client service routes
+  cloud:
+    gateway:
+      routes:
+        - id: msvc-client
+          uri: lb://msvc-client  # lb significa "Load Balancer" para equilibrio de carga
+          predicates:
+            - Path=/api/v1/clients/**
+    #wallet service routes
+        - id: msvc-wallet
+          uri: http://localhost:9091
+          predicates:
+              - Path=/api/v1/wallet/**
+    config:
+      enabled: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 8090
+
+
+
